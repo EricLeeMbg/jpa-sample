@@ -1,0 +1,24 @@
+server:
+  port: 5000
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+  datasource:
+      type: org.apache.tomcat.jdbc.pool.DataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/test?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=utf8
+      username: coooldh
+      password: coooldh1!
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    show-sql: true
+  #    properties:
+  #      hibernate.format_sql: true
+    database: mysql
+    properties:
+      hibernate.enable_lazy_load_no_trans: true
