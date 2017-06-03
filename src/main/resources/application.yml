@@ -22,3 +22,7 @@ spring:
     database: mysql
     properties:
       hibernate.enable_lazy_load_no_trans: true
+  elasticsearch:
+    cluster-name: music-application
+    host: 1.1.1.1
+    port : 9300

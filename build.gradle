@@ -35,6 +35,12 @@ dependencies {
 	compile('com.querydsl:querydsl-apt')
 	compile('com.querydsl:querydsl-jpa')
 
+
+	// Elastic Search
+	compile('org.elasticsearch:elasticsearch:5.1.1')
+	compile('org.elasticsearch.client:transport:5.1.1')
+	compile('org.apache.logging.log4j:log4j-to-slf4j:2.7')
+
 	compile('javax.servlet:jstl:1.2')
 
 
