@@ -1,0 +1,265 @@
+//_variables
+
+//** color
+$gray-base:              #000 !default;
+$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:              lighten($gray-base, 20%) !default;   // #333
+$gray:                   lighten($gray-base, 40%) !default;   // #666
+$gray-light:             lighten($gray-base, 60%) !default;   // #999
+$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+
+$brand-primary:         #4a90e2 !default;
+$brand-success:         #21a8fa !default;
+$brand-info:            #5f677c !default;
+$brand-warning:         #f0ad4e !default;
+$brand-danger:          #cd505f !default;
+$brand-cancel:          #999 !default;
+$brand-error:           #ff8080 !default;
+$brand-edit:            #399763 !default;
+$brand-delete:          #e96969 !default;
+
+$brand-success-on:      #1486cb !default;
+$brand-info-on:         #4c515e !default;
+$brand-danger-on:       #b43444 !default;
+$brand-cancel-on:       #777 !default;
+
+//** <body>
+// * Background colorheadings-font-weight
+$body-bg:               #fff !default;
+$text-color:            $gray !default;
+$btn-color:             #fff !default;
+$border-color:          #ddd !default;
+
+//** link color.
+$link-color:            $brand-primary !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+//** Typography
+//## Font, line-height, and color for body text, headings, and more.
+$font-family:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+$font-size-base:          14px !default;
+$font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-medium:        ceil(($font-size-base * 1.1)) !default; // ~16px
+$font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
+
+$font-size-h1:            floor(($font-size-base * 3.4)) !default; // ~48px
+//$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+//** line-height`
+$line-height-base:        1.428571429 !default; // 20/14
+$line-height-computed:    floor(($font-size-base * $line-height-base)) !default; // ~20px
+
+$border-radius-base:        0px !default;
+$border-radius-large:       10px !default;
+$border-radius-small:       3px !default;
+
+$headings-font-family:    inherit !default;
+$headings-font-weight:    500 !default;
+$headings-line-height:    1.1 !default;
+$headings-color:          $gray !default;
+
+$headings-small-color:    $gray-light !default;
+
+//** Z-index
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-modal-background:  1040 !default;
+$zindex-modal:             1050 !default;
+
+//** Tables
+$table-cell-padding:            8px !default;
+$table-condensed-cell-padding:  5px !default;
+$table-bg:                      transparent !default;
+$table-bg-accent:               #f9f9f9 !default;
+$table-bg-hover:                #f5f5f5 !default;
+$table-bg-active:               $table-bg-hover !default;
+$table-border-color:            #ddd !default;
+
+//** Buttons
+$btn-font-size:                  $font-size-base !default;
+$btn-font-weight:                normal !default;
+
+$btn-default-color:              $btn-color !default;
+$btn-default-bg:                 $gray !default;
+$btn-default-border:             darken($btn-default-bg, 5%) !default;
+$btn-default-bgon:               $gray-dark !default;
+$btn-default-borderon:           darken($btn-default-bgon, 5%) !default;
+
+$btn-primary-color:              $btn-color !default;
+$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
+$btn-primary-bgon:               darken($btn-primary-bg, 10%) !default;
+$btn-primary-borderon:           darken($btn-primary-bgon, 5%) !default;
+
+$btn-success-color:              $btn-color !default;
+$btn-success-bg:                 $brand-success !default;
+$btn-success-border:             darken($btn-success-bg, 5%) !default;
+$btn-success-bgon:               $brand-success-on !default;
+$btn-success-borderon:           darken($btn-success-bgon, 5%) !default;
+
+$btn-info-color:                 $btn-color !default;
+$btn-info-bg:                    $brand-info !default;
+$btn-info-border:                darken($btn-info-bg, 10%) !default;
+$btn-info-bgon:                  $brand-info-on !default;
+$btn-info-borderon:              darken($btn-info-bgon, 10%) !default;
+
+$btn-warning-color:              $btn-color !default;
+$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
+$btn-warning-bgon:               darken($btn-warning-bg, 10%) !default;
+$btn-warning-borderon:           darken($btn-warning-bgon, 5%) !default;
+
+$btn-danger-color:               $btn-color !default;
+$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
+$btn-danger-bgon:                $brand-danger-on !default;
+$btn-danger-borderon:            darken($btn-danger-bgon, 5%) !default;
+
+$btn-cancel-color:               $btn-color !default;
+$btn-cancel-bg:                  $brand-cancel !default;
+$btn-cancel-border:              darken($btn-cancel-bg, 5%) !default;
+$btn-cancel-bgon:                $brand-cancel-on !default;
+$btn-cancel-borderon:            darken($btn-cancel-bgon, 5%) !default;
+
+$btn-edit-color:               $btn-color !default;
+$btn-edit-bg:                  $brand-edit !default;
+$btn-edit-border:              darken($btn-edit-bg, 5%) !default;
+$btn-edit-bgon:                darken($btn-edit-bg, 10%) !default;
+$btn-edit-borderon:            darken($btn-edit-bgon, 5%) !default;
+
+$btn-delete-color:               $btn-color !default;
+$btn-delete-bg:                  $brand-delete !default;
+$btn-delete-border:              darken($btn-delete-bg, 5%) !default;
+$btn-delete-bgon:                darken($btn-delete-bg, 10%) !default;
+$btn-delete-borderon:            darken($btn-delete-bgon, 5%) !default;
+
+$btn-link-disabled-color:        $gray-light !default;
+
+$btn-border-radius-base:         $border-radius-base !default;
+$btn-border-radius-large:        $border-radius-large !default;
+$btn-border-radius-small:        $border-radius-small !default;
+
+$btn-padding-base-vertical:     10px !default;
+$btn-padding-base-horizontal:   20px !default;
+
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+
+$padding-large-vertical:    10px !default;
+$padding-large-horizontal:  16px !default;
+
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
+
+$padding-xs-vertical:       1px !default;
+$padding-xs-horizontal:     5px !default;
+
+$margin-base-vertical:      15px !default;
+$margin-large-vertical:     25px !default;
+$margin-small-vertical:     5px !default;
+
+$line-height-large:         1.3333333 !default; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.2 !default;
+
+//** Forms
+$input-bg:                       #f5f5f5 !default;
+$input-seller-bg:                #ffffff !default;
+$input-bg-disabled:              $gray-lighter !default;
+
+$input-color:                    $gray-dark !default;
+$input-border:                   #e1e3e3 !default;
+$input-seller-border:            #dfdee0 !default;
+
+//** Border color for inputs on focus
+$input-border-focus:             $brand-success !default;
+$input-color-placeholder:        #999 !default;
+
+$input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
+$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+
+$input-border-radius:            $border-radius-base !default;
+
+$input-seller-base-vertical:     5px !default;
+$input-seller-base-horizontal:   5px !default;
+
+$cursor-disabled:                not-allowed !default;
+
+$legend-color:                   $gray-dark !default;
+$legend-border-color:            #555555 !default;
+
+//**panel
+$panel-bg:                    #fff !default;
+$panel-body-padding:          15px !default;
+$panel-heading-padding:       10px 15px !default;
+$panel-footer-padding:        $panel-heading-padding !default;
+$panel-border-radius:         $border-radius-base !default;
+
+//** Pagination
+$pagination-color:                     $link-color !default;
+$pagination-bg:                        #fff !default;
+$pagination-border:                    #ddd !default;
+
+$pagination-hover-color:               $link-hover-color !default;
+$pagination-hover-bg:                  $gray-lighter !default;
+$pagination-hover-border:              #ddd !default;
+
+$pagination-active-color:              #fff !default;
+$pagination-active-bg:                 $brand-primary !default;
+$pagination-active-border:             $brand-primary !default;
+
+$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           #ddd !default;
+
+//** Pager
+$pager-bg:                             $pagination-bg !default;
+$pager-border:                         $pagination-border !default;
+$pager-border-radius:                  15px !default;
+
+$pager-hover-bg:                       $pagination-hover-bg !default;
+
+$pager-active-bg:                      $pagination-active-bg !default;
+$pager-active-color:                   $pagination-active-color !default;
+
+$pager-disabled-color:                 $pagination-disabled-color !default;
+
+//** Modals
+$modal-inner-padding:         15px !default;
+$modal-title-padding:         15px !default;
+$modal-title-line-height:     $line-height-base !default;
+$modal-content-bg:                             #fff !default;
+$modal-content-border-color:                   rgba(0,0,0,.2) !default;
+$modal-content-fallback-border-color:          #999 !default;
+$modal-backdrop-bg:           #000 !default;
+$modal-backdrop-opacity:      .5 !default;
+$modal-header-border-color:   #e5e5e5 !default;
+$modal-footer-border-color:   $modal-header-border-color !default;
+
+$modal-lg:                    900px !default;
+$modal-md:                    600px !default;
+$modal-sm:                    300px !default;
+
+//** Close
+$close-font-weight:           bold !default;
+$close-text-shadow:           0 1px 0 #fff !default;
+$close-color:                 #000 !default;
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         0px !default;
+
+//** width
+$container-width: 1280px;
+$pg-container-width: 1000px;

@@ -30,6 +30,11 @@ public class DemoController {
         return demoService.userSaveAndUpdate(input);
     }
 
+    @RequestMapping(value="/test", method = RequestMethod.GET)
+    public String test() {
+        return "demo";
+    }
+
     @RequestMapping(value="/user/{id}", method = RequestMethod.GET)
     public @ResponseBody
     User getUser(@PathVariable Integer id) {
