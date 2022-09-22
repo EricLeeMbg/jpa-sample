@@ -33,7 +33,7 @@ public class DemoService {
         return userRepository.getUserByQuerydsl(id);
     }
 
-    /*public Page<UserDTO>  getUserListByQueryDSL(Pageable pageable) {
+    public Page<UserDTO>  getUserListByQueryDSL(Pageable pageable) {
         return userRepository.getUserList(pageable);
-    }*/
+    }
 }
